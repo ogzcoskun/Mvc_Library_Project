@@ -1,0 +1,46 @@
+﻿@model Kitap
+
+<form method="post">
+    <input asp-for="Id" hidden />
+    <input asp-for="KitapAdi" hidden />
+    <input asp-for="Tanim" hidden />
+    <input asp-for="Yazar" hidden />
+    <input asp-for="Fiyat" hidden />
+    <div class="border p-3 mt-3">
+        <div class="row pb-3">
+            <h2 class="text-primary">Kitap Sil</h2>
+            </hr>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="KitapAdi"></label>
+            <input asp-for="KitapAdi" disabled class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Tanim"></label>
+            <input asp-for="Tanim" disabled class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Yazar"></label>
+            <input asp-for="Yazar" disabled class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Fiyat"></label>
+            <input asp-for="Fiyat" disabled class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary" style="width:200px">Kitap Sil</button>
+
+        <button class="btn btn-lg btn-danger" asp-controller="Kitap" asp-action="Index" style="float: right;">Vazgeç</button>
+
+    </div>
+</form>
+
+@* @section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+} *@
